@@ -1,9 +1,9 @@
-import React from "react";
-
-import "./App.css";
-
-const App: React.FC = () => {
-  return <div className="App"></div>;
+const App = () => {
+  return (
+    <div className="flex justify-center items-center bg-gradient-to-br from-sky-500  to-gray-300 h-[100vh] w-full">
+      Hello Weather App
+    </div>
+  );
 };
 
 export default App;
