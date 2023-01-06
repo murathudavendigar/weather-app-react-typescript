@@ -8,7 +8,7 @@ import {
 import { forecastType } from "../types";
 import Sunrise from "./Icons/Sunrise";
 import Sunset from "./Icons/Sunset";
-import Tile from "./Tile";
+import InfoSquare from "./InfoSquare";
 
 type Props = {
   data: forecastType;
@@ -68,7 +68,7 @@ const Forecast = ({ data }: Props): JSX.Element => {
             <Sunset /> <span className="mt-2">{getSunTime(data.sunset)}</span>
           </div>
 
-          <Tile
+          <InfoSquare
             icon="wind"
             title="Wind"
             info={`${Math.round(today.wind.speed)} km/h`}
@@ -77,7 +77,7 @@ const Forecast = ({ data }: Props): JSX.Element => {
             )}, gusts 
             ${today.wind.gust.toFixed(1)} km/h`}
           />
-          <Tile
+          <InfoSquare
             icon="feels"
             title="Feels like"
             info={<Degree temp={Math.round(today.main.feels_like)} />}
@@ -87,19 +87,19 @@ const Forecast = ({ data }: Props): JSX.Element => {
                 : "warmer"
             }`}
           />
-          <Tile
+          <InfoSquare
             icon="humidity"
             title="Humidity"
             info={`${today.main.humidity} %`}
             description={getHumidityValue(today.main.humidity)}
           />
-          <Tile
+          <InfoSquare
             icon="pop"
             title="Precipitation"
             info={`${Math.round(today.pop * 100)}%`}
             description={`${getPop(today.pop)}, clouds at ${today.clouds.all}%`}
           />
-          <Tile
+          <InfoSquare
             icon="pressure"
             title="Pressure"
             info={`${today.main.pressure} hPa`}
@@ -107,7 +107,7 @@ const Forecast = ({ data }: Props): JSX.Element => {
               Math.round(today.main.pressure) < 1013 ? "Lower" : "Higher"
             } than standard`}
           />
-          <Tile
+          <InfoSquare
             icon="visibility"
             title="Visibility"
             info={`${(today.visibility / 1000).toFixed()} km`}
