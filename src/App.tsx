@@ -1,4 +1,3 @@
-import Footer from "./components/Footer";
 import Forecast from "./components/Forecast";
 import Search from "./components/Search";
 import useForecast from "./hooks/useForecast";
