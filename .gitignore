@@ -11,8 +11,9 @@
 # production
 /build
 
-# starter files
+# starter files and some files
 /starter-files
+/oldApp.tsx
 
 # misc
 .DS_Store
