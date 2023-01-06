@@ -46,7 +46,7 @@ const Search = ({
             ))}
           </ul>
           <button
-            className="rounded-r-md border-2 border-zinc-200 hover:border-zinc-500 hover:text-zinc-500 text-zinc-100 px-2 py-1 cursor-pointer"
+            className="rounded-r-md border-2 border-zinc-200 transition-all hover:border-zinc-500 hover:text-zinc-500 text-zinc-100 px-2 py-1 cursor-pointer"
             onClick={handleSubmit}>
             Search
           </button>
