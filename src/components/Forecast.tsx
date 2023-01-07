@@ -12,6 +12,7 @@ import InfoSquare from "./InfoSquare";
 
 type Props = {
   data: forecastType;
+  backSearchPage: () => void;
 };
 
 const Degree = ({ temp }: { temp: number }): JSX.Element => (
@@ -20,7 +21,7 @@ const Degree = ({ temp }: { temp: number }): JSX.Element => (
   </span>
 );
 
-const Forecast = ({ data }: Props): JSX.Element => {
+const Forecast = ({ data, backSearchPage }: Props): JSX.Element => {
   const today = data.list[0];
 
   return (
@@ -114,6 +115,13 @@ const Forecast = ({ data }: Props): JSX.Element => {
             description={getVisibilityValue(today.visibility)}
           />
         </section>
+        <div className="text-center">
+          <button
+            className="w-[100px] rounded-md border-2 border-zinc-200 transition-all hover:border-zinc-500 hover:text-zinc-500 text-zinc-700 bg-white/10 backdrop-blur-ls px-2 py-1 cursor-pointer"
+            onClick={backSearchPage}>
+            Back
+          </button>
+        </div>
       </div>
     </div>
   );

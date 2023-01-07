@@ -48,6 +48,11 @@ const useForecast = () => {
     setCity(option);
   };
 
+  const backSearchPage = () => {
+    setForecast(null);
+    setTerm("");
+  };
+
   useEffect(() => {
     if (city) {
       setTerm(city.name);
@@ -62,6 +67,7 @@ const useForecast = () => {
     handleChange,
     handleSubmit,
     handleOptionButton,
+    backSearchPage,
   };
 };
 
