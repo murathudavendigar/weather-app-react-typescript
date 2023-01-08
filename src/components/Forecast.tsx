@@ -39,8 +39,10 @@ const Forecast = ({ data, backSearchPage }: Props): JSX.Element => {
             {today.weather[0].main} {today.weather[0].description}
           </p>
           <p className="text-sm">
-            H: <Degree temp={Math.ceil(today.main.temp_max)} />
-            L: <Degree temp={Math.floor(today.main.temp_min)} />
+            <span className="font-bold">H:</span>{" "}
+            <Degree temp={Math.ceil(today.main.temp_max)} />{" "}
+            <span className="font-bold">L:</span>{" "}
+            <Degree temp={Math.floor(today.main.temp_min)} />
           </p>
         </section>
 
