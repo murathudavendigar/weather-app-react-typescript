@@ -47,6 +47,8 @@ To create an advanced weather app with React, TypeScript and TailwindCSS
 │    │       └── index.ts
 │    ├── hooks
 │    │       └── useForecast.tsx
+│    ├── types
+│    │       └── index.ts
 │    ├── App.tsx
 │    ├── index.css
 │    └── index.tsx
